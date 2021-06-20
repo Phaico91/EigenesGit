@@ -1,0 +1,4 @@
+class Workplace
+{
+  Person worker; ...
+};

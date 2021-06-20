@@ -1,0 +1,18 @@
+sh : {id : 0, class : Shape}
+l0 : {id : 1, class : Line, attr : {length : 1}}
+l1 : {id : 2, class : Line, attr : {length : 3}}
+l2 : {id : 3, class : Line, attr : {length : 3}}
+l2 : {id : 3, class : Line, attr : {length : 10}}
+c0 : {id : 4, class : Circle, attr : {radius : 1, area : 3.141593}}
+c1 : {id : 5, class : Circle, attr : {radius : 2, area : 12.566371}}
+c2 : {id : 6, class : Circle, attr : {radius : 1, area : 3.141593}}
+r0 : {id : 7, class : Rectangle, attr : {height : 1, width : 1, area : 1}}
+r1 : {id : 8, class : Rectangle, attr : {height : 1, width : 2, area : 2}}
+r2 : {id : 9, class : Rectangle, attr : {height : 3, width : 3, area : 9}}
+r3 : {id : 10, class : Rectangle, attr : {height : 1, width : 1, area : 1}}
+sq0 : {id : 11, class : Square, attr : {side_length : 1, area : 1}}
+sq1 : {id : 12, class : Square, attr : {side_length : 10, area : 100}}
+sq1 : {id : 12, class : Square, attr : {side_length : 5, area : 25}}
+sq2 : {id : 13, class : Square, attr : {side_length : 3, area : 9}}
+sq3 : {id : 14, class : Square, attr : {side_length : 3, area : 9}}
+r4 : {id : 15, class : Rectangle, attr : {height : 2.5, width : 2.8, area : 7.0}}
