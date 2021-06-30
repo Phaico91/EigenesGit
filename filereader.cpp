@@ -17,10 +17,11 @@ int main(void){
 	srand((unsigned)time(0)); 
 	string filename="wortliste.txt",filler="-";
 	bool another=true,geloest=false,gameover=false;
-	const int versuche=2;
+	const int versuche=11;
 	size_t fails=0;
 	char vorschlag;
 	string unseen="_";
+	unsigned int richtiggeratene;
 	
 	int number_of_lines=0; 
 	
@@ -45,8 +46,9 @@ int main(void){
 	fails=0;
 	char next='y';
 	int randindex=get_rand_num(number_of_lines -1); 
-	cout << "Zufaelliges Wort ist: " << content[randindex] << endl;
+	//cout << "Zufaelliges Wort ist: " << content[randindex] << endl;
 	int count=content[randindex].size();
+	richtiggeratene=0;
 	string* str=new string[count];
 	for(int i=0;i<count;i++){
 		str[i]=unseen;
@@ -66,11 +68,14 @@ int main(void){
 		while(content[randindex].find(vorschlag)!= std::string::npos){
 			int temp= content[randindex].find(vorschlag);		
 			str[temp]=vorschlag;
+			richtiggeratene++;
 			content[randindex].replace(temp,1,filler);
 			for(int i=0;i<count;i++){
 				cout << str[i] << " ";
 			}
 			cout << " " << endl;
+			//cout << count << endl;
+			//cout << richtiggeratene << endl;
 			
 			
 			
@@ -79,8 +84,12 @@ int main(void){
 	else{
 		fails++;
 	}
-	size_t found=str->find("_");
 	
+	
+	if(richtiggeratene>=count)
+	{
+		geloest=true;
+	cout << "WIN!" << endl;}
 	if(fails>=versuche){
 			gameover=true;
 			cout << " LOOSE!" << endl;
